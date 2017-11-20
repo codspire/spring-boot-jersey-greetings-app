@@ -1,0 +1,6 @@
+// START SNIPPET include-projects
+
+include "services:hello-service"
+include "modules:message-decorator"
+
+// END SNIPPET include-projects
