@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = "0.7.9"
+    reportsDir = file("$project.buildDir/outputs/jacoco")
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination = file("$project.buildDir/outputs/jacoco")
+    }
+}
+
+check.dependsOn jacocoTestReport
+
+task codeCoverageReport(type: JacocoReport) {
+    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+    subprojects.each {
+        sourceSets it.sourceSets.main
+    }
+
+    reports {
+        xml.enabled true
+        xml.destination "$project.buildDir/outputs/jacoco/report.xml"
+        html.enabled true
+        csv.enabled false
+    }
+}
+
+codeCoverageReport.dependsOn {
+    subprojects*.test
+}

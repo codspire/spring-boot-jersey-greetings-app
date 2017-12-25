@@ -1,0 +1,20 @@
+apply plugin: 'findbugs'
+
+task findbugs(type: FindBugs) {
+    description 'Find bugs mainly design flaws, bad practices, multithreaded correctness and code vulnerabilities.'
+    group 'verification'
+    excludeFilter = file("$project.rootDir/tools/rules-findbugs.xml")
+    classes = fileTree("$project.rootDir").include('**/*.class')
+    source = fileTree("$project.rootDir").include('**/*.java')
+    effort 'max'
+    reportLevel = "high"
+    classpath = files()
+
+	ignoreFailures = true
+
+    reports {
+        xml.enabled = false
+        html.enabled = true
+        html.destination file("$project.buildDir/outputs/findbugs/findbugs.html")
+    }
+}

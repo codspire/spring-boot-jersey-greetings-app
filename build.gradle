@@ -1,3 +1,11 @@
+apply from: "$project.rootDir/tools/findbugs.gradle"
+apply from: "$project.rootDir/tools/checkstyle.gradle"
+apply from: "$project.rootDir/tools/pmd.gradle"
+apply from: "$project.rootDir/tools/javancss.gradle"
+apply from: "$project.rootDir/tools/jacoco.gradle"
+
+apply plugin: 'java'
+
 // START SNIPPET configuration-injection
 buildscript {
 	ext {
@@ -42,5 +50,11 @@ subprojects {
 	}
 }
 
+repositories {
+	mavenCentral()
+}
+
+//https://blog.mindorks.com/static-code-analysis-for-android-using-findbugs-pmd-and-checkstyle-3a2861834c6a
+//https://github.com/ashwini009/TvMaze/tree/master/tools
 
 // END SNIPPET configuration-injection
