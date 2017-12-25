@@ -35,3 +35,11 @@ http://localhost:8091/info
 More Details: https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html
 ```
 
+### Code Quality
+```
+./gradlew findbugs
+./gradlew pmd
+./gradlew checkstyle
+./gradlew javancss
+./gradlew codeCoverageReport
+```
