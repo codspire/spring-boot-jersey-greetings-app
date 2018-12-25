@@ -12,7 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.codspire.helloservice.HelloConfig;
+import com.codspire.helloservice.config.HelloConfig;
 import com.codspire.helloservice.domain.Greeting;
 
 //https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples/spring-boot-sample-jersey

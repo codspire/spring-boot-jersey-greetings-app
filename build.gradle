@@ -34,7 +34,6 @@ subprojects {
 
 	apply plugin: 'java'
 	apply plugin: 'eclipse'
-	//apply plugin: 'org.springframework.boot'
 
 	group = 'com.codspire'
 	version = '0.0.1-SNAPSHOT'
@@ -48,8 +47,9 @@ subprojects {
 		compile 'io.springfox:springfox-swagger2:2.9.2'
 		compile 'io.springfox:springfox-swagger-ui:2.9.2'
 		compile 'io.swagger:swagger-jersey2-jaxrs:1.5.21'
+		compile 'org.springframework:spring-core:4.3.12.RELEASE'
+		testCompile('junit:junit:4.12')
 		testCompile "com.google.truth:truth:0.36"
-	//	testCompile('org.springframework.boot:spring-boot-starter-test')
 	}
 }
 

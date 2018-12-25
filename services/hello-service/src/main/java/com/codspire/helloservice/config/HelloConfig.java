@@ -1,4 +1,4 @@
-package com.codspire.helloservice;
+package com.codspire.helloservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

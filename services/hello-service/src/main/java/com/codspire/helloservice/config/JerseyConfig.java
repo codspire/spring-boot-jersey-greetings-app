@@ -1,4 +1,4 @@
-package com.codspire.helloservice;
+package com.codspire.helloservice.config;
 
 import com.codspire.helloservice.web.HelloResource;
 import io.swagger.jaxrs.config.BeanConfig;
@@ -9,10 +9,10 @@ import org.glassfish.jersey.server.wadl.internal.WadlResource;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import javax.ws.rs.ApplicationPath;
 
 @Component
-//@ApplicationPath("/api/v1/greeting")
+
+//@ApplicationPath("/api/v1")
 public class JerseyConfig extends ResourceConfig {
 
     public JerseyConfig() {
