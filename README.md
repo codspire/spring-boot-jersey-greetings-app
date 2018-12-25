@@ -10,7 +10,7 @@ java -jar services/hello-service/build/libs/hello-service-0.0.1-SNAPSHOT.jar
 ```
 ### Test 1: Endpoint Without Parameter
 ```sh
-curl -sb -H http://localhost:8090/api/v1/greeting/hello 
+curl -sb -H http://localhost:8888/api/v1/greeting/hello 
 ```
 #### Output
 ```javascript
@@ -18,7 +18,7 @@ curl -sb -H http://localhost:8090/api/v1/greeting/hello
 ```
 ### Test 2: Endpoint With Parameter
 ```sh
-curl -sb -H http://localhost:8090/api/v1/greeting/hello/rakesh 
+curl -sb -H http://localhost:8888/api/v1/greeting/hello/rakesh 
 ```
 #### Output
 ```javascript
@@ -28,9 +28,10 @@ curl -sb -H http://localhost:8090/api/v1/greeting/hello/rakesh
 
 ### Actuator Endpoints
 ```javascript
-http://localhost:8091/beans
-http://localhost:8091/metrics
-http://localhost:8091/info
+http://localhost:9999/beans
+http://localhost:9999/metrics
+http://localhost:9999/info
+http://localhost:9999/health
 
 More Details: https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html
 ```
@@ -43,3 +44,20 @@ More Details: https://docs.spring.io/spring-boot/docs/current/reference/html/pro
 ./gradlew javancss
 ./gradlew codeCoverageReport
 ```
+
+### Swagger (using springfox)
+```javascript
+http://localhost:8888/swagger-ui.html
+```
+![Swagger Page](media/swagger.png "Swagger Page")
+### Credits / References
+SpringFox with Jersey
+```javascript
+https://github.com/springfox/springfox/issues/1352
+https://stackoverflow.com/questions/37640863/springfox-swagger-no-api-docs-with-spring-boot-jersey-and-gradle/38004323#38004323
+```
+Spring Boot, Jersey, Swagger
+```javascript
+https://tech.asimio.net/2016/04/05/Microservices-using-Spring-Boot-Jersey-Swagger-and-Docker.html
+https://github.com/brightzheng100/springboot-jersey-swagger
+```javascript
