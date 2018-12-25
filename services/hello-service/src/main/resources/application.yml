@@ -1,16 +1,24 @@
 server:
-  port: 8090
-  
+  port: 8888
+# Spring MVC dispatcher servlet path.
+# Needs to be different than Jersey's to enable/disable Actuator endpoints access (/info, /health, ...)
+  servlet-path: /
+
 #todo: make sure to always enable security in production
 security:
   basic:
     enabled: false
 
+springfox.documentation.swagger.v2.path: /api/swagger.json
+
 #management endpoints on a separate port
 management:
-  port: 8091
+  port: 9999
   security:
     enabled: false # management port is internal only. no need to secure it.
+
+spring:
+  jersey.application-path: /api
 
 #default project info followed by actual injected pom-specified values.
 project:

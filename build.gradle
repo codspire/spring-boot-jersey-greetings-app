@@ -45,6 +45,9 @@ subprojects {
 	}
 
 	dependencies {
+		compile 'io.springfox:springfox-swagger2:2.9.2'
+		compile 'io.springfox:springfox-swagger-ui:2.9.2'
+        compile 'io.swagger:swagger-jersey2-jaxrs:1.5.21'
 		testCompile "com.google.truth:truth:0.36"
 	//	testCompile('org.springframework.boot:spring-boot-starter-test')
 	}

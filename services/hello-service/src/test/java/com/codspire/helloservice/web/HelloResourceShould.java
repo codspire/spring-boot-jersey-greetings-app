@@ -20,7 +20,7 @@ import com.codspire.helloservice.domain.Greeting;
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = HelloConfig.class)
 public class HelloResourceShould {
 
-	private static final String API_URI = "/api/v1/greeting";
+	private static final String API_URI = "/api/v1";
 
 	@Autowired
 	private TestRestTemplate restTemplate;
