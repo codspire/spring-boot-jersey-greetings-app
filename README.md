@@ -1,4 +1,4 @@
-## Simple Spring Boot Greetings App Using Gradle Multi Project
+# Simple Spring Boot App Using Jersey / JAX-RS, SpringFox, Swagger2, Gradle
 
 ### Build
 ```sh
@@ -25,8 +25,7 @@ curl -sb -H http://localhost:8888/api/v1/greeting/hello/rakesh
 {"message":"Hello Rakesh","responseTime":1511150257287}
 ```
 
-
-## Actuator Endpoints
+### Actuator Endpoints
 * http://localhost:9999/beans
 * http://localhost:9999/metrics
 * http://localhost:9999/info
@@ -34,7 +33,7 @@ curl -sb -H http://localhost:8888/api/v1/greeting/hello/rakesh
 
 More Details: https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html
 
-## Code Quality
+### Code Quality
 ```
 ./gradlew findbugs
 ./gradlew pmd
@@ -43,12 +42,12 @@ More Details: https://docs.spring.io/spring-boot/docs/current/reference/html/pro
 ./gradlew codeCoverageReport
 ```
 
-## Swagger (using springfox)
-```javascript
-http://localhost:8888/swagger-ui.html
-```
+### Swagger (using springfox)
+* http://localhost:8888/swagger-ui.html
+
 ![Swagger Page](media/swagger.png "Swagger Page")
-## Credits / References
+
+### Credits / References
 #### SpringFox with Jersey
 * https://github.com/springfox/springfox/issues/1352
 * https://stackoverflow.com/questions/37640863/springfox-swagger-no-api-docs-with-spring-boot-jersey-and-gradle/38004323#38004323
